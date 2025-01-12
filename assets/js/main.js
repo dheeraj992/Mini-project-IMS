@@ -1,3 +1,5 @@
+var itemsCount = 3;
+var finalPrice = 15097
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close')
@@ -63,6 +65,37 @@ const scrollActive = () =>{
 			sectionsClass.classList.remove('active-link')
 		}                                                    
 	})
+}
+
+function handleDelete(icon){
+
+    const container = icon.closest('.cart__card')
+    container.style.display = 'none'
+    
+    if(itemsCount > 0){
+
+        itemsCount -- ;
+        UpdateCartItems()
+    }
+    
+
+}
+
+function UpdateCartItems(){
+if(itemsCount > 0){
+    const element = document.querySelector('.cart__prices-item')
+    const totalPrice = document.querySelector('.cart__prices-total')
+    totalPrice.innerHTML = ` Rs. ${finalPrice}`
+    element.innerHTML = `${itemsCount} items`
+
+}
+else{
+     const element = document.querySelector('.cart__prices-item')
+    element.innerHTML = ''
+    const totalPrice = document.querySelector('.cart__prices-total')
+    totalPrice.style.display = 'none'
+    
+}
 }
 window.addEventListener('scroll', scrollActive)
 const scrollUp = () =>{
