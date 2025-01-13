@@ -72,11 +72,11 @@
                         <div class="cart__amount">
                             <div class="cart__amount-content">
                                 <span class="cart__amount-box">
-                                    <i class='bx bx-minus'></i>
+                                    <i class='bx bx-minus' onclick="handleMinus(this)"></i>
                                 </span>
                                 <span class="cart__amount-number">1</span>
                                 <span class="cart__amount-box">
-                                    <i class='bx bx-plus' ></i>
+                                    <i class='bx bx-plus' onclick="handlePlus(this)" ></i>
                                 </span>
                             </div>
                             <i class='bx bx-trash-alt cart__amount-trash' onclick="handleDelete(this)"></i>
@@ -93,11 +93,11 @@
                         <div class="cart__amount">
                             <div class="cart__amount-content">
                                 <span class="cart__amount-box">
-                                    <i class='bx bx-minus' ></i>
+                                    <i class='bx bx-minus' onclick="handleMinus(this)" ></i>
                                 </span>
                                 <span class="cart__amount-number">1</span>
                                 <span class="cart__amount-box">
-                                    <i class='bx bx-plus' ></i>
+                                    <i class='bx bx-plus' onclick="handlePlus(this)" ></i>
                                 </span>
                             </div>
                             <i class='bx bx-trash-alt cart__amount-trash' onclick="handleDelete(this)"></i>
@@ -109,16 +109,16 @@
                         <img src="assets/img/Infotenment System.jpg" alt="" class="cart__img">
                     </div>
                     <div class="cart__details">
-                        <h3 class="cart__title">INFOTENMENT<h3>
+                        <h3 class="cart__title">INFOTAINMENT<h3>
                         <span class="cart__price">Rs.6599</span>
                         <div class="cart__amount">
                             <div class="cart__amount-content">
                                 <span class="cart__amount-box">
-                                    <i class='bx bx-minus' ></i>
+                                    <i class='bx bx-minus' onclick="handleMinus(this)"></i>
                                 </span>
                                 <span class="cart__amount-number">1</span>
                                 <span class="cart__amount-box">
-                                    <i class='bx bx-plus' ></i>
+                                    <i class='bx bx-plus' onclick="handlePlus(this)"></i>
                                 </span>
                             </div>
                             <i class='bx bx-trash-alt cart__amount-trash' onclick="handleDelete(this)"></i>
@@ -178,25 +178,25 @@
                             <h3 class="featured__title">Suzuki Streeing</h3>
                             <span class="featured__price">₹2999 </span>
                         </div>
-                        <button class="button featured__button">Description</button>
+                        <button class="button featured__button" onclick="handleDescription(this)">Description </button>
                     </article>
                     <article class="featured__card">
                         <span class="featured__tag">Sale</span>
                         <img src="assets/img/Infotenment System.jpg" alt="" class="featured__img">
                         <div class="featured__data">
-                            <h3 class="featured__title">Infotenment System </h3>
+                            <h3 class="featured__title">Infotainment System </h3>
                             <span class="featured__price">₹6599</span>
                         </div>
-                        <button class="button featured__button">Description</button>
+                        <button class="button featured__button" onclick="handleDescription(this)">Description</button>
                     </article>
                     <article class="featured__card">
                         <span class="featured__tag">Sale</span>
                         <img src="assets/img/Gear knob.jpg" alt="" class="featured__img">
                         <div class="featured__data">
-                            <h3 class="featured__title">SUZUKI GEAR KNOB</h3>
+                            <h3 class="featured__title">Suzuki Gear Knob</h3>
                             <span class="featured__price">₹1299</span>
                         </div>
-                        <button class="button featured__button">Description</button>
+                        <button class="button featured__button" onclick="handleDescription(this)">Description</button>
                     </article>
                 </div>
             </section>
@@ -268,6 +268,19 @@
                     </article>
                 </div>
             </section>
+
+            <!-- MODAL--> 
+            <div class="modal-overlay" id="modalOverlay">
+                <div class="modal">
+                  <div class="modal-header">Description</div>
+                  <div class="modal-body">
+                    This is a sample description modal that opens in the center of the screen.
+                  </div>
+                  <div class="modal-footer">
+                    <button class="close-btn" id="closeModalBtn" onclick="handleClose()">Close</button>
+                  </div>
+                </div>
+              </div>  
             <!--TESTIMONIAL-->
             <section class="testimonial section container">
                 <div class="testimonial__container grid">
